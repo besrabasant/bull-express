@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+  	"express": "*",
+  	"bull": "*",
+  	"bull-arena": "*",
+  	"ioredis": "*",
+  	"uuid": "*",
+  	"axios": "*"
+  },
+  "devDependencies": {
+   
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "js",
+  "eslintConfig": {
+		"env": {
+			"node": true
+		}
+	},
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ./node_modules/gulp/bin/gulp test",
+    "test-coverage": "node ./node_modules/gulp/bin/gulp test-coverage"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "version": "1.0.0"
+}

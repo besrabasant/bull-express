@@ -1,0 +1,12 @@
+ID: BullExpress
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: js
+   type: nodejs
+   path: js
+   provides:
+    - name: js_api
+      properties:
+         url: ${default-url}

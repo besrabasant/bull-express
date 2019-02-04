@@ -1,0 +1,27 @@
+{
+	"parserOptions": {
+        "ecmaVersion": 8
+    },
+	"extends": "eslint:recommended",
+	"rules": {
+        "semi": ["error", "always"],
+        "curly": ["error", "all"],
+        "eqeqeq": ["error", "smart"],
+        "strict": ["error", "global"],
+        "array-bracket-spacing": ["error", "never"],
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "camelcase": ["error"],
+        "key-spacing": ["error", {
+			"afterColon": true,
+			"beforeColon": false
+		}],
+		"no-var": ["error"],
+		"prefer-const": ["error"],
+		"sort-imports": ["error", {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }]
+    }
+}
