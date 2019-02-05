@@ -7,7 +7,7 @@ const uuidV4 = v4;
 
 const redis = new Redis({
 	port: 6379,
-	host: 'vhmcdbfpdb.mcd.rot.hec.sap.biz'
+	host: '127.0.0.1'
 });
 
 const WEBHOOK_PREFIX = 'webhook:';

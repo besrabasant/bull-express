@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 
 function getRedisConfig(redisUrl) {
 	return {
-		host: 'vhmcdbfpdb.mcd.rot.hec.sap.biz',
+		host: '127.0.0.1',
 		port: 6379
 	};
 }
@@ -25,7 +25,7 @@ app.use(express.urlencoded({
 })); // to support URL-encoded bodies
 //const router = require('./router')(app,server);
 
-app.post('/webhooks', async(req, res, next) => {
+app.post('/webhooks', async (req, res, next) => {
 	const {
 		payload,
 		urls
@@ -39,7 +39,7 @@ app.post('/webhooks', async(req, res, next) => {
 		next(error);
 	}
 });
-app.post('/webhooks/notify', async(req, res, next) => {
+app.post('/webhooks/notify', async (req, res, next) => {
 	const {
 		id
 	} = req.body;
@@ -75,7 +75,9 @@ app.use('/', Arena({
 	basePath: '/arena',
 	disableListen: true
 }));
-server.on(`request`, app);
+
+server.on('request', app);
+
 server.listen(port, () => {
 	console.info(`HTTP Server: ${server.address().port}`);
 });

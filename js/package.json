@@ -1,25 +1,25 @@
 {
   "dependencies": {
-  	"express": "*",
-  	"bull": "*",
-  	"bull-arena": "*",
-  	"ioredis": "*",
-  	"uuid": "*",
-  	"axios": "*"
+    "axios": "*",
+    "bull": "*",
+    "bull-arena": "*",
+    "esm": "^3.2.0",
+    "express": "*",
+    "ioredis": "*",
+    "uuid": "*"
   },
-  "devDependencies": {
-   
-  },
+  "devDependencies": {},
   "files": [],
   "main": "server.js",
   "name": "js",
   "eslintConfig": {
-		"env": {
-			"node": true
-		}
-	},
+    "env": {
+      "node": true
+    }
+  },
   "scripts": {
-    "start": "node server.js",
+    "start": "node -r esm server.js",
+    "worker": "node -r esm worker.js",
     "test": "node ./node_modules/gulp/bin/gulp test",
     "test-coverage": "node ./node_modules/gulp/bin/gulp test-coverage"
   },
